@@ -24,11 +24,6 @@ const ListTodos = () => {
     }
 
 
-
-
-
-
-
     const getTodos = async () => {
         try {
             const response = await fetch(`${link}`);
