@@ -2,9 +2,12 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+const dotenv = require('dotenv');
 
 
+dotenv.config();
 
+const PORT = process.env.PORT;
 
 // Middleware --> app.use()
 app.use(cors());
@@ -76,7 +79,7 @@ app.delete("/todos/:id", async (req, res) => {
     }
 }) 
 
-app.listen(8080, () => {
-    console.log("server has started on port 8080")
+app.listen(PORT, () => {
+    console.log(`server has started on port ${PORT}`);
 });
 
