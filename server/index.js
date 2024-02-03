@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const cors = require("cors");
+//const cors = require("cors");
 const dotenv = require('dotenv');
 const poolItems = require('./DBconfig.js')
 
@@ -10,16 +10,16 @@ dotenv.config();
 const PORT = process.env.PORT;
 
 
-const corsOptions = {
-    origin: "https://pern-app-frontend.onrender.com", 
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-};
+// const corsOptions = {
+//     origin: "https://pern-app-frontend.onrender.com", 
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     credentials: true,
+// };
 
 
 
 // Middleware --> app.use()
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 app.use(express.json());
 
 
