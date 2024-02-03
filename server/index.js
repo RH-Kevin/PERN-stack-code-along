@@ -9,8 +9,17 @@ dotenv.config();
 
 const PORT = process.env.PORT;
 
+
+const corsOptions = {
+    origin: "https://pern-app-frontend.onrender.com", 
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+};
+
+
+
 // Middleware --> app.use()
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 
