@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install && deploy",
+    "build": "npm install && npm run deploy",
     "start": "node index.js",
     "deploy": "psql $DATABASE_URL -f ./database.sql"
   },
