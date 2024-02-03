@@ -41,12 +41,13 @@ app.post("/todos", async(req,res) => {
 
 // Get all todos
 app.get("/", async(req, res) => {
-    try {
-        const allTodos = await poolItems.query("SELECT * FROM todo");
-        res.json(allTodos.rows);
-    } catch (error) {
-        console.error(error.message);
-    }
+    res.send("Hello, I am working");
+    // try {
+    //     const allTodos = await poolItems.query("SELECT * FROM todo");
+    //     res.json(allTodos.rows);
+    // } catch (error) {
+    //     console.error(error.message);
+    // }
 })
 
 // Get a todo
