@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm install",
-    "start": "node index.js"
+    "build": "npm install && deploy",
+    "start": "node index.js",
+    "deploy": "psql $DATABASE_URL -f db/database.sql"
   },
   "keywords": [],
   "author": "",
