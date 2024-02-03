@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from "react";
 
+const link = "https://pern-todo-backend-b72a.onrender.com"
 
 const EditTodo = ({todo}) => {
     const [description, setDescription] = useState(todo.description);
@@ -10,7 +11,7 @@ const updateDescription = async(e) => {
     try {
         const body = { description };
         const response = await fetch(
-            `http://localhost:8080/todos/${todo.todo_id}`,
+            `${link}/todos/${todo.todo_id}`,
             {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },

@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
 
+const link = "https://pern-todo-backend-b72a.onrender.com"
+
 const InputTodo = () => {
 
     const [description, setDescription] = useState("Hello");
@@ -8,7 +10,7 @@ const InputTodo = () => {
         e.preventDefault();
         try {
             const body = {description};
-            const response = await fetch("http://localhost:8080/todos", {
+            const response = await fetch(`${link}/todos`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(body)

@@ -2,7 +2,7 @@ import React, {Fragment, useEffect, useState} from "react";
 
 
 import EditTodo from "./EditTodo";
-
+const link = "https://pern-todo-backend-b72a.onrender.com"
 
 
 const ListTodos = () => {
@@ -14,7 +14,7 @@ const ListTodos = () => {
     // Delete Function
     const deleteTodo = async (id) => {
         try {
-            const deleteTodo = await fetch(`http://localhost:8080/todos/${id}`, {
+            const deleteTodo = await fetch(`${link}/todos/${id}`, {
                 method: "DELETE"
             });
             setTodos(todos.filter( todo => todo.todo_id !== id));
@@ -31,7 +31,7 @@ const ListTodos = () => {
 
     const getTodos = async () => {
         try {
-            const response = await fetch("http://localhost:8080/");
+            const response = await fetch(`${link}`);
             const jsonData = await response.json();
             setTodos(jsonData);
         } catch (error) {
