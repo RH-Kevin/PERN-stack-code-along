@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const dotenv = require('dotenv');
+const poolItems = require("./DBconfig");
 
-import poolItems from "./dbconfig";
 
 dotenv.config();
 
